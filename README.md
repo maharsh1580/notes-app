@@ -30,6 +30,21 @@ docker compose up --build -d
 
 The API service waits for PostgreSQL and applies migrations before starting. Open <http://localhost:8000/docs> for interactive API docs. `/health` is a process health check, not a database readiness check. Local development credentials are `notes` / `notes`, database `notes`. The database uses a persistent Docker volume. The ports are bound to localhost.
 
+### Windows shortcuts
+
+After installing Docker Desktop, double-click `Start-Backend.cmd` in this folder. It starts Docker Desktop if needed, waits for Docker to be ready, then builds and starts the database and API. Wait for the success message before opening the Android app.
+
+Double-click `Stop-Backend.cmd` to stop the services. This preserves the Docker database volume, so your saved notes remain available the next time you start the backend.
+
+To inspect service status or troubleshoot startup from a terminal in this folder:
+
+```sh
+docker compose ps
+docker compose logs --tail=100 api db
+```
+
+### Local Python setup
+
 For a local Python workflow, use Python 3.12+ and a running PostgreSQL server:
 
 ```sh
