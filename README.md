@@ -49,11 +49,13 @@ The app never silently creates database tables: migrations own schema changes.
 
 Open `android` in Android Studio. Use the bundled JDK 25 (or another Gradle 9.6 compatible JDK) and install Android SDK Platform 37 and Build Tools 36.0.0. Sync and run the `app` debug configuration on an emulator (Android 8.0/API 26 or newer).
 
-The default API URL is `http://10.0.2.2:8000/`, which reaches the host computer from the Android emulator. Start the backend first. For a USB device, run `adb reverse tcp:8000 tcp:8000` and build with:
+The default API URL is `http://127.0.0.1:8000/`. Start the backend, then run `adb reverse tcp:8000 tcp:8000` so the emulator or USB device can reach the backend on your computer. Run this command again if the device reconnects and the connection stops working. Build with:
 
 ```sh
 ./gradlew :app:assembleDebug -PNOTES_API_URL=http://127.0.0.1:8000/
 ```
+
+To use the standard Android emulator host address without an ADB tunnel, build with `-PNOTES_API_URL=http://10.0.2.2:8000/` instead.
 
 On Windows use `gradlew.bat` in place of `./gradlew`. For another server, pass `-PNOTES_API_URL=https://your-server/` (the trailing slash is required). Local HTTP is enabled only in debug builds. Release builds require an HTTPS endpoint; configure its URL explicitly before distributing.
 
