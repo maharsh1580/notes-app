@@ -1,0 +1,50 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+keystore.properties
+key.properties
+credentials.json
+service-account*.json
+
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.ruff_cache/
+*.egg-info/
+.coverage
+.coverage.*
+htmlcov/
+
+# Android / Gradle and IDE machine state
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+*.iml
+*.apk
+*.aab
+*.hprof
+
+# Local data, logs, and backups
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.sql.gz
+*.log
+*.bak
+.DS_Store
+Thumbs.db
