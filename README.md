@@ -118,4 +118,6 @@ PostgreSQL tests use an outer transaction and savepoints, rolling back each test
 ./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
 ```
 
-Dependency/build references: [Android Gradle plugin documentation](https://developer.android.com/build/releases/about-agp), [FastAPI database documentation](https://fastapi.tiangolo.com/tutorial/sql-databases/).
+Dependency/build references: 
+[Android Gradle plugin documentation](https://developer.android.com/build/releases/about-agp),
+[FastAPI database documentation](https://fastapi.tiangolo.com/tutorial/sql-databases/).
