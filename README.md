@@ -1,6 +1,6 @@
 # Notes
 
-A small Android Kotlin app backed by FastAPI and PostgreSQL. Create, list, open, edit, and delete notes. The scope is Notes CRUD only; authentication, payments, and AWS are intentionally absent.
+A small Android Kotlin app backed by FastAPI and PostgreSQL. Create, list, open, edit, and delete notes. The scope is Notes CRUD only; authentication, payments, and cloud deployment are intentionally absent.
 
 ## Structure
 
